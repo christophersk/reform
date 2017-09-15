@@ -5,7 +5,7 @@ const db = require('./db');
 
 const port = process.env.PORT || 3000;
 
-const server = app.listen(port, err => {
+const server = app.listen(process.env.PORT || 3000, err => {
   if (err) throw err;
   console.log('server listening on port', port);
   db.sync()
